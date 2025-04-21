@@ -1,4 +1,7 @@
-body {
+* {
+    box-sizing: border-box;
+  }
+  body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -43,7 +46,7 @@ body {
     justify-content: center;
   }
   
-  ..product-card {
+  .product-card {
     background: white;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -57,7 +60,7 @@ body {
   .product-card img {
     width: 100%;
     max-width: 150px;
-    height: auto;
+    height: 180px;
     border-radius: 8px;
     margin-bottom: 10px;
     object-fit: cover;
@@ -66,6 +69,12 @@ body {
   
   .product-card:hover {
     transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
   }
   
   footer {
@@ -75,4 +84,21 @@ body {
     padding: 1rem;
     margin-top: 2rem;
   }
+  @media (max-width: 600px) {
+    .product-grid {
+      flex-direction: column;
+      align-items: center;
+    }
   
+    .product-card {
+      width: 80%;
+    }
+  
+    #hero {
+      padding: 1rem;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
