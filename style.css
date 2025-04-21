@@ -37,18 +37,25 @@ body {
   
   .product-grid {
     display: flex;
-    gap: 20px;
-    padding: 1rem;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 2rem;
     justify-content: center;
   }
   
-  .product-card {
+  ..product-card {
     background: white;
     border: 1px solid #ccc;
     border-radius: 10px;
     text-align: center;
     padding: 1rem;
-    width: 150px;
+    width: 180px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
   }
   
   footer {
